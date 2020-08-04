@@ -1,0 +1,214 @@
+\documentclass[fontsize=11pt]{article}
+    \usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage[svgnames]{xcolor}  % Colours by their 'svgnames'
+\usepackage[margin=0.33in,top=0.4in]{geometry}
+\usepackage{url}
+\usepackage{lmodern} % Allow arbitrary font sizes
+\usepackage{textcomp}
+\usepackage{hyperref}
+
+
+%% Define a new 'modern' style for the url package that will use a smaller font.
+\makeatletter
+\def\url@modernstyle{
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{}}}
+  \renewcommand\large{\@setfontsize\Large{11pt}{18}}
+\makeatother
+\urlstyle{modern} %% And use the newly defined style.
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+\hypersetup{
+    pdfborder=0 0 0
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{                 % Change font of \section command
+  \vspace{-1mm}
+  \usefont{OT1}{phv}{b}{n}%   % bch-b-n: CharterBT-Bold font
+  \sectionrule{0pt}{0pt}{-5pt}{1.5pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{88888888}      % Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}   % Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+    \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+    \par \normalsize \normalfont}
+
+\newcommand{\CoopInfo}[1]{ % Slogan (optional)
+    \vspace{1.5mm}
+    \large \hfill #1
+    \par \normalsize \normalfont \vspace{-2mm}}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}\vspace{0.5mm}}
+
+\newcommand{\PersonalEntry}[2]{
+    \noindent\hangindent=0em\hangafter=0 % Indentation
+    \parbox{\spacebox}{                  % Box to align text
+    \textit{#1}}                      % Entry name (birth, address, etc.)
+    \hspace{2em} #2 \par}              % Entry value
+
+\newcommand{\SkillsEntry}[2]{                % Same as \PersonalEntry
+    \noindent\baselineskip=14pt\hangindent=0em\hangafter=0 % Indentation
+    \parbox{\spacebox}{                  % Box to align text
+    \bf{#1}}                    % Entry name (birth, address, etc.)
+    \hspace{2em} #2 \par}              % Entry value
+
+\newcommand{\AwardsEntry}[2]{                % Same as \PersonalEntry
+    \noindent\hangindent=0em\hangafter=0 % Indentation
+    \parbox{\spacebox}{                  % Box to align text
+    \textit{#1}}                    % Entry name (birth, address, etc.)
+    \hspace{2em} #2 \par}              % Entry value
+
+\newcommand{\EducationEntry}[4]{
+    \noindent \textbf{\large #1} \hfill      % School
+    \smash{\colorbox{Black}{%
+      {%
+      \hfill\color{White}\strut ~#2~}}} \par  % Duration
+      \vspace{0.5mm}
+    \noindent \textit{#3} \par        % Degree
+    \noindent\hangindent=0em\hangafter=0 #4 % Description
+    \par}
+
+\newcommand{\WorkEntry}[4]{       % Same as \EducationEntry
+    \noindent \textbf{\large#1} \hfill      % Company
+    \smash{\colorbox{Black}{%
+      {%
+      \hfill\color{White}\strut ~#2~}}} \par   % Duration
+    \vspace{0.5mm}
+        \noindent \textit{#3} \par        % Job title
+    \noindent\hangindent=2em\hangafter=0 #4 % Description
+    \par}
+
+\newcommand{\ProjectEntry}[4]{         % Similar to \EducationEntry
+    \noindent \textbf{\large #1} \noindent \textit{#3} \hfill {#2} \par
+    \vspace{0.5mm}
+    \noindent #4 % Description
+    \par}
+
+\newcommand{\AwardEntry}[4]{         % Similar to \EducationEntry
+    \noindent \textbf{\large #1} \noindent \textit{#2}
+    \vspace{0.5mm}
+    \hfill \smash{\colorbox{Black}{%
+      {%
+      \hfill\color{White}\strut ~#3~}}} \par   % Duration
+    \noindent #4 % Description
+    \par}
+
+\begin{document}
+    
+\MyName{Naman Sood}
+% remove co-op info for external jobs
+%\CoopInfo{2A Computer Science | Student ID 2081{\kern 0.05em}3855}
+\vspace{4mm}
+{\hfill \href{mailto:mail@nsood.in}{mail@nsood.in} | 
+                \href{tel:4372157822}{(437) 215-7822} | 
+                \href{https://goo.gl/maps/xFxCn9MEkaZ4TJxT8}{Waterloo, ON}\vspace{0.5mm}}
+
+{\hfill \href{https://nsood.in}{www.nsood.in} | 
+                \href{https://github.com/namansood}{github.com/namansood} |
+                \href{https://linkedin.com/in/namansood}{linkedin.com/in/namansood}}
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Skills}{}
+\normalsize
+\SkillsEntry{Languages}{JavaScript, Golang, Rust, C, HTML5, CSS3, Bash, Racket, C++, SQL, Python, PHP}
+\SkillsEntry{Technologies}{Node.js, MongoDB, MySQL, React/React Native, gRPC, Linux, AWS, Firebase, Nginx, Apache, Docker}
+
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Work Experience}{}
+\normalsize
+\WorkEntry
+{University of Waterloo}
+{May 2020 – Aug 2020}
+{Research Associate, Faculty of Engineering}
+{\begin{itemize} \itemsep -1pt
+    \item {\bf Co-authored research paper} by conducting experiments on AWS, and analyzing experimental data for a novel Byzantine fault tolerance framework written in Golang and C++.
+    \item {\bf Hardened security} by implementing BLS threshold signature verification on clients connected to a distributed computing system.
+    \item {\bf Streamlined deployment} of project by using Docker to containerize dependencies for repeatable builds across diverse environments.
+    \item {\bf Backported components} of existing C++ utility to support development of changes in project forked from older version of utility.
+    \end{itemize}}
+\vspace{2.5mm}
+\WorkEntry
+{Creesync Software}
+{May 2019 – Aug 2019}
+{Software Engineering Intern}
+{\begin{itemize} \itemsep -1pt
+    \item {\bf Simplified delivery} of professional photographs, by creating REST API and native apps for photographers to preview photos to customers before delivery, using Electron, React Native, AWS S3, and MongoDB.
+    \item {\bf Reduced technical debt} in social media app by establishing DRY coding practices and implemented user-facing functionality - liking and creating image posts and comments, using React Native and Firebase.
+    \end{itemize}}
+\vspace{2.5mm}
+\WorkEntry
+{The Girl Code}
+{Mar 2018 – Apr 2020}
+{Full Stack Developer}
+{\begin{itemize} \itemsep -1pt
+	\item Enabled school-aged girls to learn programming by {\bf creating an online platform} to teach Python with intuitive tutorials, live code examples and a digital companion, using Node.js and MongoDB.
+	\item Tracked usage of the learning platform in collaboration with {\bf National University of Singapore} for research project, and received letter of recommendation from the University.
+    \end{itemize}}
+
+%%% Projects
+%%% ------------------------------------------------------------
+\NewPart{Projects}{}
+\normalsize
+\ProjectEntry{Vibgyor}{}
+{JavaScript, Apache Cordova}
+{Won 1\textsuperscript{st} place in XINO 2018 hackathon. Optimized smartphone UX for visually impaired,
+using voice commands and live text narration.}
+\sepspace
+%%%
+\iffalse
+\ProjectEntry{\href{https://github.com/namansood/watson}{Watson}}{}
+{Node.js, Microsoft Azure APIs}
+{Streamlined web searches for academia by introducing research-focused features like link previews
+and `pinboards' to save search results.}
+\sepspace
+\fi
+%%%
+\ProjectEntry{\href{https://github.com/namansood/tsh}{Turtle Shell}}{}
+{C, POSIX APIs}
+{Shell for Unix-like operating systems in C. Learned dynamic memory management, process management,
+and usage of POSIX interfaces. }
+\sepspace
+\ProjectEntry{\href{https://github.com/namansood/chip8-rust}{CHIP8-rust}}{}
+{Rust}
+{Implementation of CHIP8 virtual machine. Learned Rust,
+emulated behavior of machine instructions, and created graphics in a framebuffer.}
+%%%
+\iffalse
+%%% Awards
+%%% ------------------------------------------------------------
+\NewPart{Awards}{}
+\AwardEntry{Google Code-In 2017}{Finalist, CloudCV}
+{Dec 2017}
+{Recognized for extensive contributions to CloudCV's open-source projects – features, bugfixes, documentation and more.}
+\fi
+%%%
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+\EducationEntry
+{University of Waterloo}
+{Sep 2019 – Apr 2024 (expected)}
+{Candidate for Bachelor of Computer Science – 92.4\%}
+{\begin{itemize}
+    \vspace{1.5mm}
+    \item {\bf Director, Developer Student Club (Google Developers):} Reached over 150 people to organize workshop by a Google engineer over two weeks, by creating and maintaining a website, social media handles, and posters.
+    \item {\bf Mentor, StarterHacks 2020:} Helped enable over 1000 participants by providing technical support and design critique in Canada's largest beginner-focused hackathon.
+    \end{itemize}}
+\ 
+\end{document}
