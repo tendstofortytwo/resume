@@ -1,11 +1,11 @@
-\documentclass[fontsize=11pt]{article}
+\documentclass{article}
     \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage[protrusion=true]{microtype}
 \usepackage[svgnames]{xcolor}  % Colours by their 'svgnames'
-\usepackage[margin=0.75in,top=0.3in,bottom=0.3in]{geometry}
+\usepackage[margin=0.7in,top=0.3in,bottom=0.3in]{geometry}
 \usepackage{url}
 \usepackage{lmodern} % Allow arbitrary font sizes
 \usepackage{textcomp}
@@ -26,8 +26,6 @@
 \hypersetup{
     pdfborder=0 0 0
 }
-\input{glyphtounicode}
-\pdfgentounicode=1
 
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -38,7 +36,7 @@
 \sectionfont{                 % Change font of \section command
   \vspace{-1mm}
   \usefont{OT1}{phv}{b}{n}%   % bch-b-n: CharterBT-Bold font
-  \sectionrule{0pt}{0pt}{-5pt}{1.5pt}}
+  \sectionrule{0pt}{0pt}{-5pt}{1pt}}
 
 %%% Macros
 %%% ------------------------------------------------------------
@@ -55,7 +53,7 @@
     \large \hfill #1
     \par \normalsize \normalfont \vspace{-2mm}}
 
-\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}\vspace{0.5mm}}
+\newcommand{\NewPart}[1]{\section*{\large \uppercase{#1}}\vspace{-1mm}}
 
 \newcommand{\PersonalEntry}[2]{
     \noindent\hangindent=0em\hangafter=0 % Indentation
@@ -131,7 +129,7 @@
 
 %%% Work experience
 %%% ------------------------------------------------------------
-\NewPart{Work Experience}{}
+\NewPart{Experience}{}
 \normalsize
 \WorkEntry
 {University of Waterloo}
