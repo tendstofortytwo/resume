@@ -55,19 +55,13 @@
 
 \newcommand{\NewPart}[1]{\section*{\large \uppercase{#1}}\vspace{-1mm}}
 
-\newcommand{\PersonalEntry}[2]{
-    \noindent\hangindent=0em\hangafter=0 % Indentation
-    \parbox{\spacebox}{                  % Box to align text
-    \textit{#1}}                      % Entry name (birth, address, etc.)
-    \hspace{2em} #2 \par}              % Entry value
-
-\newcommand{\SkillsEntry}[2]{                % Same as \PersonalEntry
+\newcommand{\SkillsEntry}[2]{
     \noindent\baselineskip=14pt\hangindent=0em\hangafter=0 % Indentation
-    \parbox{\spacebox}{                  % Box to align text
+    \makebox[1.75cm][l]{                  % Box to align text
     \bf{#1}}                    % Entry name (birth, address, etc.)
     \hspace{2em} #2 \par}              % Entry value
 
-\newcommand{\AwardsEntry}[2]{                % Same as \PersonalEntry
+\newcommand{\AwardsEntry}[2]{
     \noindent\hangindent=0em\hangafter=0 % Indentation
     \parbox{\spacebox}{                  % Box to align text
     \textit{#1}}                    % Entry name (birth, address, etc.)
@@ -125,7 +119,7 @@
 \NewPart{Skills}{}
 \normalsize
 \SkillsEntry{Languages}{JavaScript, Golang, Rust, C, C++, Scala, HTML5, CSS3, Bash, Racket, SQL, Python, PHP}
-\SkillsEntry{Technologies}{Node.js, Linux, AWS, React/React Native, MongoDB, SQL, Nginx, Apache, Docker, gRPC, Firebase}
+\SkillsEntry{Technologies}{Node.js, Linux, React/React Native, Docker, AWS, MongoDB, Nginx, Apache, gRPC, Firebase}
 
 %%% Work experience
 %%% ------------------------------------------------------------
@@ -141,7 +135,7 @@
     \item Streamlined deployment of project, using Docker images to generate repeatable builds across diverse environments.
     \item Unified similar codebases by migrating components to a single project to reduce code duplication, using C++.
     \end{itemize}}
-\vspace{2.5mm}
+\vspace{1mm}
 \WorkEntry
 {Creesync Software}
 {May 2019 – Aug 2019}
@@ -149,9 +143,9 @@
 {\begin{itemize} \itemsep -1pt
     \item Created photo delivery service for professional photographers, by implementing a REST API and native apps for photographers to preview photos to customers before delivery, using Electron, React Native, and AWS.
     \item Reduced technical debt in React Native project by combining similar functionality into portable modules.
-    \item Implemented user-facing features including likes and comments in social media app, using React Native and Firebase.
+    \item Implemented frontend features including likes and comments in social media app, using React Native and Firebase.
     \end{itemize}}
-\vspace{2.5mm}
+\vspace{1mm}
 \WorkEntry
 {The Girl Code}
 {Mar 2018 – Apr 2020}
@@ -172,8 +166,8 @@ using voice commands and text narration.}
 \sepspace
 \ProjectEntry{\href{https://github.com/namansood/cmdmap}{cmdmap}}{}
 {Node.js}
-{Node module to map command line programs to a JSON interface. Designed developer API to ensure
-security and usability.}
+{Node module to map CLI programs to a JSON API. Designed abstraction over standard
+library features for improved security.}
 \sepspace
 %%%
 \iffalse
@@ -191,7 +185,7 @@ and usage of POSIX interfaces. }
 \sepspace
 \ProjectEntry{\href{https://github.com/namansood/chip8-rust}{CHIP8-rust}}{}
 {Rust}
-{Emulator for CHIP-8 microprocessor. Simulated behavior of machine instructions using
+{Emulator for CHIP-8 microprocessor. Simulated behavior of machine instructions with
 Rust, created graphics in framebuffer.}
 %%%
 \iffalse
