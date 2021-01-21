@@ -10,6 +10,7 @@
 \usepackage{lmodern} % Allow arbitrary font sizes
 \usepackage{textcomp}
 \usepackage{hyperref}
+\usepackage{enumitem}
 
 
 %% Define a new 'modern' style for the url package that will use a smaller font.
@@ -28,6 +29,7 @@
 }
 
 \renewcommand{\familydefault}{\sfdefault}
+\setlist[itemize]{leftmargin=*}
 
 %%% Custom sectioning (sectsty package)
 %%% ------------------------------------------------------------
@@ -130,10 +132,10 @@
 {May 2020 --– Aug 2020}
 {Research Associate, Sirius Blockchain Research Group}
 {\begin{itemize} \itemsep -1pt
-    \item Assisted research by conducting experiments on AWS and analyzing performance data using Python and gnuplot, for a novel Byzantine fault tolerant consensus framework.
-    \item Hardened security by studying and enforcing BLS signature verification for distributed computing system in Golang.
+    \item Hardened security by enforcing BLS signature verification for Byzantine fault tolerance system in Golang.
     \item Streamlined deployment of project, using Docker images to generate repeatable builds across diverse environments.
     \item Unified similar codebases by migrating components to a single project to reduce code duplication, using C++.
+    \item Assisted distributed systems research by conducting experiments on AWS and analyzing performance data using gnuplot.
     \end{itemize}}
 \vspace{1mm}
 \WorkEntry
@@ -141,7 +143,8 @@
 {May 2019 --– Aug 2019}
 {Software Engineering Intern}
 {\begin{itemize} \itemsep -1pt
-    \item Created photo delivery service for professional photographers, by implementing a REST API and native apps for photographers to preview photos to customers before delivery, using Electron, React Native, and AWS.
+    \item Simplified professional photography, by building native apps to deliver photos to clients, using Electron and React Native.
+    \item Designed and deployed API to upload and preview photos in low-bandwidth situations, using Node.js and AWS S3.
     \item Reduced technical debt in React Native project by combining similar functionality into reusable components.
     \item Implemented frontend features including likes and comments in social media app, using React Native and Firebase.
     \end{itemize}}
@@ -151,7 +154,7 @@
 {Mar 2018 --– Apr 2020}
 {Full Stack Developer}
 {\begin{itemize} \itemsep -1pt
-	\item Created online learning platform to promote gender equality by teaching Python programming to school-aged girls using intuitive tutorials, live code examples and a digital companion, using Node.js and MongoDB.
+	\item Empowered school children by creating online platform to learn Python programming, using Node.js and MongoDB.
 	\item Assisted research by tracking usage of learning platform to collect data for National University of Singapore study.
     \end{itemize}}
 
@@ -159,34 +162,34 @@
 %%% ------------------------------------------------------------
 \NewPart{Projects}{}
 \normalsize
+\ProjectEntry{\href{https://github.com/namansood/chip8-rust}{CHIP8-rust}}{}
+{Rust}
+{Emulator for CHIP-8 microprocessor. Simulated behavior of machine instructions with
+Rust, created graphics in framebuffer.}
+\sepspace
 \ProjectEntry{Vibgyor}{}
 {JavaScript, Apache Cordova}
 {Won 1\textsuperscript{st} place in XINO 2018 hackathon. Optimized phone UX for visually impaired
 using voice commands and text narration.}
 \sepspace
-\ProjectEntry{\href{https://github.com/namansood/cmdmap}{cmdmap}}{}
-{Node.js}
-{Node module to map CLI programs to a JSON API. Designed abstraction over standard
-library features for improved security.}
-\sepspace
-%%%
-\iffalse
-\ProjectEntry{\href{https://github.com/namansood/watson}{Watson}}{}
-{Node.js, Microsoft Azure APIs}
-{Streamlined web searches for academia by introducing research-focused features like link previews
-and `pinboards' to save search results.}
-\sepspace
-\fi
-%%%
 \ProjectEntry{\href{https://github.com/namansood/tsh}{Turtle Shell}}{}
 {C, POSIX APIs}
 {Shell for Unix operating systems in C. Learned memory management, process management,
 and usage of POSIX interfaces. }
 \sepspace
-\ProjectEntry{\href{https://github.com/namansood/chip8-rust}{CHIP8-rust}}{}
-{Rust}
-{Emulator for CHIP-8 microprocessor. Simulated behavior of machine instructions with
-Rust, created graphics in framebuffer.}
+\ProjectEntry{\href{https://github.com/namansood/cmdmap}{cmdmap}}{}
+{Node.js}
+{Node module to map CLI programs to a JSON API. Designed abstraction over standard
+library features for improved security.}
+    %%%
+    \iffalse
+    \ProjectEntry{\href{https://github.com/namansood/watson}{Watson}}{}
+    {Node.js, Microsoft Azure APIs}
+    {Streamlined web searches for academia by introducing research-focused features like link previews
+    and `pinboards' to save search results.}
+    \sepspace
+    \fi
+    %%%
 %%%
 \iffalse
 %%% Awards
@@ -207,8 +210,8 @@ Rust, created graphics in framebuffer.}
 {\begin{itemize}
     \vspace{1.5mm}
     \item {\bf Awards and Honors:} Received \$15,000 Computer Science Upper Year Scholarship, and placed on Dean's Honors List.
-    \item {\bf Mentor, StarterHacks 2020:} Helped enable over 1000 participants by providing technical support and design critique in Canada's largest beginner-focused hackathon.
-    \item {\bf Writer, mathNEWS:} Provide insight, experiences and entertainment to students by writing articles and opinion pieces for the biweekly student publication of the Faculty of Mathematics. 
+    \item {\bf Mentor, StarterHacks 2020:} Provided technical and design advice in Canada's largest beginner-focused hackathon.
+    \item {\bf Editor, mathNEWS:} Provide news and recreation to student body via student publication of the Faculty of Mathematics. 
     \end{itemize}}
 \ 
 \end{document}
