@@ -55,7 +55,7 @@
     \large \hfill #1
     \par \normalsize \normalfont \vspace{-2mm}}
 
-\newcommand{\NewPart}[1]{\section*{\large \uppercase{#1}}\vspace{-1mm}}
+\newcommand{\NewPart}[1]{\vspace{-1mm}\section*{\large \uppercase{#1}}\vspace{-1mm}}
 
 \newcommand{\SkillsEntry}[2]{
     \noindent\baselineskip=14pt\hangindent=0em\hangafter=0 % Indentation
@@ -132,8 +132,10 @@
 {Jan 2021 -- Apr 2021}
 {Software Engineering Intern}
 {\begin{itemize} \itemsep -1pt
-    \item Boosted compatibility with cloud infrastructure by enabling safe unprivileged VPN access, using Google gVisor sandbox.
+    \item Boosted compatibility with cloud environments by providing in-process network infrastructure, using Google gVisor sandbox.
     \item Enabled simple, standard communication for programs over Tailscale network by creating a SOCKS5 proxy server in Go.
+    \item Simplified deployment of Tailscale in containers by creating ephemeral authentication keys with auto-cleanup mechanism.
+    \item Secured continuous integration and deployment pipelines by creating GitHub Action to allow workflows to use Tailscale.
     \item Improved support experience by documenting common administrative tasks as knowledge base articles.
     \end{itemize}}
 \vspace{1mm}
@@ -175,17 +177,17 @@
 {Rust}
 {Emulator for CHIP-8 microprocessor. Simulated behavior of machine instructions with
 Rust, created graphics in framebuffer.}
-\sepspace
+\vspace{2mm}
 \ProjectEntry{\href{https://github.com/namansood/prose}{Prose}}{}
 {Go}
 {Markdown-powered blog. Developed custom HTTP server with hooks for web request logging, routing 
 and error handling.}
-\sepspace
+\vspace{2mm}
 \ProjectEntry{\href{https://github.com/namansood/tsh}{Turtle Shell}}{}
 {C, POSIX APIs}
 {Shell for Unix operating systems in C. Learned memory management, process management,
 and usage of POSIX interfaces. }
-\sepspace
+\vspace{2mm}
 \ProjectEntry{\href{https://github.com/namansood/cmdmap}{cmdmap}}{}
 {Node.js}
 {Node module to map CLI programs to a JSON API. Designed abstraction over standard
@@ -198,8 +200,8 @@ library features for improved security.}
 {University of Waterloo}
 {Sep 2019 -- Apr 2024 (expected)}
 {Candidate for Bachelor of Computer Science -- 94.5\%}
-{\begin{itemize}
-    \vspace{1.5mm}
+{\begin{itemize} \itemsep -1pt
+    \vspace{1mm}
     \item {\bf Awards and Honors:} Received \$15,000 Computer Science Upper Year Scholarship, and placed on Dean's Honors List.
     \item {\bf Mentor, StarterHacks 2020:} Provided technical and design advice in Canada's largest beginner-focused hackathon.
     \item {\bf Editor, mathNEWS:} Provide news and recreation to student body via student publication of the Faculty of Mathematics. 
