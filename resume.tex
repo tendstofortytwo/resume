@@ -107,7 +107,7 @@
     \par}
 
 \newcommand{\ProjectEntry}[4]{         % Similar to \EducationEntry
-    \noindent \textbf{\large #1} \noindent \textit{#3} \hfill {#2} \par
+    \noindent {\large \textbf{#1} (\underline{\href{#2}{link}})} \noindent \textit{#3} \par
     \vspace{0.5mm}
     \noindent #4 % Description
     \par}
@@ -218,22 +218,22 @@ functionality into reusable components.
 %%% ------------------------------------------------------------
 \NewPart{Projects}{}
 \normalsize
-\ProjectEntry{\href{https://github.com/namansood/chip8-rust}{CHIP8-rust}}{}
+\ProjectEntry{CHIP8-rust}{https://github.com/namansood/chip8-rust}
 {Rust}
 {Emulator for CHIP-8 microprocessor. Simulated behavior of machine instructions with
 Rust, created graphics in framebuffer.}
 \vspace{2mm}
-\ProjectEntry{\href{https://github.com/namansood/prose}{Prose}}{}
+\ProjectEntry{Prose}{https://github.com/namansood/prose}
 {Go}
 {Markdown-powered blog. Developed custom HTTP server with hooks for web request logging, routing 
 and error handling.}
 \vspace{2mm}
-\ProjectEntry{\href{https://github.com/namansood/tsh}{Turtle Shell}}{}
+\ProjectEntry{Turtle Shell}{https://github.com/namansood/tsh}
 {C, POSIX APIs}
 {Shell for Unix operating systems in C. Learned memory management, process management,
 and usage of POSIX interfaces. }
 \vspace{2mm}
-\ProjectEntry{\href{https://github.com/namansood/cmdmap}{cmdmap}}{}
+\ProjectEntry{cmdmap}{https://github.com/namansood/prose}
 {Node.js}
 {Node module to map CLI programs to a JSON API. Designed abstraction over standard
 library features for improved security.}
