@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Original template from: http://www.howtotex.com/
+% Modified for use by Naman Sood.
+%
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+%
+% HowToTeX seems to be dead, but the unmodified template can
+% be found at:
+% https://www.overleaf.com/latex/templates/your-new-cv/xqzhcmqkqrtw
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[protrusion=true]{microtype}
+\usepackage[svgnames]{xcolor}  % Colours by their 'svgnames'
+\usepackage{url}
+\usepackage{lmodern} % Allow arbitrary font sizes
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{sectsty}
+%\usepackage{fontspec}
+
+%\setsansfont{Roboto}
+
+\newcommand{\MyName}[1]{ % Name
+\Huge 
+\usefont{OT1}{phv}{b}{n}
+\begin{center} #1 \end{center}
+\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\vspace{-3mm}\section*{\large \uppercase{#1}}\vspace{-1mm}}
+
+\newcommand{\SkillsEntry}[2]{
+\noindent\baselineskip=14pt\hangindent=0em\hangafter=0 % Indentation
+\makebox[1.75cm][l]{                  % Box to align text
+\bf{#1}}                    % Entry name (birth, address, etc.)
+\hspace{2em} #2 \par}              % Entry value
+
+\newcommand{\EducationEntry}[4]{
+\noindent \textbf{\large #1} \hfill      % School
+\smash{\colorbox{Black}{%
+  {%
+  \hfill\color{White}\strut ~#2~}}} \par  % Duration
+  \vspace{0.5mm}
+\noindent \textit{#3} \par        % Degree
+\noindent\hangindent=0em\hangafter=0 #4 % Description
+\par}
+
+\newcommand{\WorkEntry}[4]{       % Same as \EducationEntry
+\noindent \textbf{\large#1} \hfill      % Company
+\smash{\colorbox{Black}{%
+  {%
+  \hfill\color{White}\strut ~#2~}}} \par   % Duration
+\vspace{0.5mm}
+    \noindent \textit{#3} \par        % Job title
+\noindent\hangindent=2em\hangafter=0 #4 % Description
+\par}
+
+\newcommand{\ProjectEntry}[4]{         % Similar to \EducationEntry
+\noindent {\large \textbf{#1} (\underline{\href{#2}{link}})} \noindent \textit{#3} \par
+\vspace{0.5mm}
+\noindent #4 % Description
+\par}
+
+%% Define a new 'modern' style for the url package that will use a smaller font.
+\makeatletter
+\def\url@modernstyle{
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{}}}
+  \renewcommand\large{\@setfontsize\Large{11pt}{18}}
+\makeatother
+%\urlstyle{modern} %% And use the newly defined style.
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+\hypersetup{
+    pdfborder=0 0 0
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+\setlist[itemize]{leftmargin=*}
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+
+\sectionfont{                 % Change font of \section command
+  \vspace{-1mm}
+  \usefont{OT1}{phv}{b}{n}%   % bch-b-n: CharterBT-Bold font
+  \sectionrule{0pt}{0pt}{-5pt}{1pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{developer}      % Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}   % Vertical space macro

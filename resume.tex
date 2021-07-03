@@ -13,120 +13,13 @@
 % https://www.overleaf.com/latex/templates/your-new-cv/xqzhcmqkqrtw
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{article}
-    \usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage[protrusion=true]{microtype}
-\usepackage[svgnames]{xcolor}  % Colours by their 'svgnames'
-\usepackage[margin=0.65in,top=0.3in,bottom=0.3in]{geometry}
-\usepackage{url}
-\usepackage{lmodern} % Allow arbitrary font sizes
-\usepackage{textcomp}
-\usepackage{hyperref}
-\usepackage{enumitem}
-%\usepackage{fontspec}
-%\setsansfont{Roboto}
-
-%% Define a new 'modern' style for the url package that will use a smaller font.
-\makeatletter
-\def\url@modernstyle{
-  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{}}}
-  \renewcommand\large{\@setfontsize\Large{11pt}{18}}
-\makeatother
-%\urlstyle{modern} %% And use the newly defined style.
-
-\frenchspacing              % Better looking spacings after periods
-\pagestyle{empty}           % No pagenumbers/headers/footers
-
-\hypersetup{
-    pdfborder=0 0 0
-}
-
-\renewcommand{\familydefault}{\sfdefault}
-\setlist[itemize]{leftmargin=*}
-
-%%% Custom sectioning (sectsty package)
-%%% ------------------------------------------------------------
-\usepackage{sectsty}
-
-\sectionfont{                 % Change font of \section command
-  \vspace{-1mm}
-  \usefont{OT1}{phv}{b}{n}%   % bch-b-n: CharterBT-Bold font
-  \sectionrule{0pt}{0pt}{-5pt}{1pt}}
-
-%%% Macros
-%%% ------------------------------------------------------------
-\newlength{\spacebox}
-\settowidth{\spacebox}{developer}      % Box to align text
-\newcommand{\sepspace}{\vspace*{1em}}   % Vertical space macro
-
-\newcommand{\MyName}[1]{ % Name
-    \Huge 
-    \usefont{OT1}{phv}{b}{n}
-    \begin{center} #1 \end{center}
-    \par \normalsize \normalfont}
-
-\newcommand{\CoopInfo}[1]{ % Slogan (optional)
-    \vspace{1.5mm}
-    \large \hfill #1
-    \par \normalsize \normalfont \vspace{-2mm}}
-
-\newcommand{\NewPart}[1]{\vspace{-1mm}\section*{\large \uppercase{#1}}\vspace{-1mm}}
-
-\newcommand{\SkillsEntry}[2]{
-    \noindent\baselineskip=14pt\hangindent=0em\hangafter=0 % Indentation
-    \makebox[1.75cm][l]{                  % Box to align text
-    \bf{#1}}                    % Entry name (birth, address, etc.)
-    \hspace{2em} #2 \par}              % Entry value
-
-\newcommand{\AwardsEntry}[2]{
-    \noindent\hangindent=0em\hangafter=0 % Indentation
-    \parbox{\spacebox}{                  % Box to align text
-    \textit{#1}}                    % Entry name (birth, address, etc.)
-    \hspace{2em} #2 \par}              % Entry value
-
-\newcommand{\EducationEntry}[4]{
-    \noindent \textbf{\large #1} \hfill      % School
-    \smash{\colorbox{Black}{%
-      {%
-      \hfill\color{White}\strut ~#2~}}} \par  % Duration
-      \vspace{0.5mm}
-    \noindent \textit{#3} \par        % Degree
-    \noindent\hangindent=0em\hangafter=0 #4 % Description
-    \par}
-
-\newcommand{\WorkEntry}[4]{       % Same as \EducationEntry
-    \noindent \textbf{\large#1} \hfill      % Company
-    \smash{\colorbox{Black}{%
-      {%
-      \hfill\color{White}\strut ~#2~}}} \par   % Duration
-    \vspace{0.5mm}
-        \noindent \textit{#3} \par        % Job title
-    \noindent\hangindent=2em\hangafter=0 #4 % Description
-    \par}
-
-\newcommand{\ProjectEntry}[4]{         % Similar to \EducationEntry
-    \noindent {\large \textbf{#1} (\underline{\href{#2}{link}})} \noindent \textit{#3} \par
-    \vspace{0.5mm}
-    \noindent #4 % Description
-    \par}
-
-\newcommand{\AwardEntry}[4]{         % Similar to \EducationEntry
-    \noindent \textbf{\large #1} \noindent \textit{#2}
-    \vspace{0.5mm}
-    \hfill \smash{\colorbox{Black}{%
-      {%
-      \hfill\color{White}\strut ~#3~}}} \par   % Duration
-    \noindent #4 % Description
-    \par}
+\usepackage[margin=0.65in,top=0.3in,bottom=0.5in]{geometry}
+\usepackage{resume}
 
 \begin{document}
     
 \MyName{Naman Sood}
-% remove co-op info for external jobs
-%\CoopInfo{2A Computer Science | Student ID 2081{\kern 0.05em}3855}
-\vspace{1.5mm}
+\vspace{1mm}
 {\hfill \href{mailto:mail@nsood.in}{mail@nsood.in} | 
         \href{https://www.nsood.in}{www.nsood.in} | 
         \href{tel:4372157822}{(437) 215-7822} | 
@@ -155,6 +48,7 @@
 \normalsize
 \SkillsEntry{Languages}{JavaScript, Go, Rust, C++, C, Scala, HTML5, CSS3, Shell, Python, Racket, Haskell}
 \SkillsEntry{Technologies}{Linux, Git, Docker, TCP/IP, AWS, gRPC, React, SQL, MongoDB, Firebase}
+\vspace{1mm} % other sections end in list items, which have their own padding -- compensate for that here
 
 %%% Work experience
 %%% ------------------------------------------------------------
@@ -169,14 +63,7 @@
 }
 \iffalse
 % long form description for job applications
-Made Tailscale ready for the cloud, by creating features that allowed it 
-to run in lightweight, unprivileged container environments. This included
-a virtual networking stack for connecting to the Tailscale network without
-kernel privileges to create a network driver, a SOCKS5 proxy to allow
-applications to communicate over this virtual networking stack, and ephemeral
-authentication keys for stateless access to the Tailscale network. Also published
-long-form technical content on company blog and contributed to product knowledge
-base.
+Made Tailscale ready for the cloud, by creating features that allowed it to run in lightweight, unprivileged container environments. This included a virtual networking stack for connecting to the Tailscale network without kernel privileges to create a network driver, a SOCKS5 proxy to allow applications to communicate over this virtual networking stack, and ephemeral authentication keys for stateless access to the Tailscale network. Also published long-form technical content on company blog (https://tailscale.com/blog/2021-05-github-actions-and-tailscale/) and contributed to product knowledge base.
 \fi
 \WorkEntry
 {Tailscale}
@@ -192,12 +79,7 @@ base.
 \vspace{1mm}
 \iffalse
 % long form description for job applications
-Accelerated research in the field of Byzantine fault tolerant distributed
-computing, by implementing security features (like BLS signature verification),
-streamlining build and deployment of project using Docker, and reducing
-technical debt by standardizing use of external dependencies. Conducted
-performance benchmarks on AWS and analyzed performance data using gnuplot
-and Python.
+Accelerated research in the field of Byzantine fault tolerant distributed computing, by implementing security features (like BLS signature verification), streamlining build and deployment of project using Docker, and reducing technical debt by standardizing use of external dependencies. Conducted performance benchmarks on AWS and analyzed performance data using gnuplot and Python.
 \fi
 \WorkEntry
 {University of Waterloo}
@@ -212,11 +94,7 @@ and Python.
 \vspace{1mm}
 \iffalse
 % long form description for job applications
-Designed and build native apps for professional photographers to deliver
-photos to clients, using Electron and React Native, and created API to
-preview uploaded photos in low-bandwidth situations, using Node.js and
-AWS S3. Reduced technical debt in React Native project by combining similar
-functionality into reusable components.
+Designed and build native apps for professional photographers to deliver photos to clients, using Electron and React Native, and created API to preview uploaded photos in low-bandwidth situations, using Node.js and AWS S3. Reduced technical debt in React Native project by combining similar functionality into reusable components.
 \fi
 \WorkEntry
 {Creesync Software}
@@ -245,17 +123,17 @@ functionality into reusable components.
 {Rust}
 {Emulator for CHIP-8 microprocessor. Simulated behavior of machine instructions with
 Rust, created graphics in framebuffer.}
-\vspace{1mm}
+\vspace{1.5mm}
 \ProjectEntry{Prose}{https://github.com/namansood/prose}
 {Go}
 {Markdown-powered blog. Developed custom HTTP server with hooks for web request logging, routing 
 and error handling.}
-\vspace{1mm}
+\vspace{1.5mm}
 \ProjectEntry{Turtle Shell}{https://github.com/namansood/tsh}
 {C, POSIX APIs}
 {Shell for Unix operating systems in C. Learned memory management, process management,
 and usage of POSIX interfaces. }
-\vspace{1mm}
+\vspace{1.5mm}
 \ProjectEntry{cmdmap}{https://github.com/namansood/cmdmap}
 {Node.js}
 {Node module to map CLI programs to a JSON API. Designed abstraction over standard
