@@ -19,7 +19,7 @@
 \usepackage{lmodern}
 \usepackage[protrusion=true]{microtype}
 \usepackage[svgnames]{xcolor}  % Colours by their 'svgnames'
-\usepackage[margin=0.65in,top=0.3in,bottom=0.15in]{geometry}
+\usepackage[margin=0.65in,top=0.3in,bottom=0.3in]{geometry}
 \usepackage{url}
 \usepackage{lmodern} % Allow arbitrary font sizes
 \usepackage{textcomp}
@@ -133,6 +133,22 @@
         \href{https://linkedin.com/in/namansood}{linkedin.com/in/namansood} |
         \href{https://github.com/namansood}{github.com/namansood}
 \hfill}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+\EducationEntry
+{University of Waterloo}
+{Sep 2019 -- Apr 2024}
+{Bachelor of Computer Science -- 94.5\%}
+{\begin{itemize} \itemsep -1pt
+    \vspace{1mm}
+    \item {\bf Awards and Honors:} Received \$15,000 Computer Science Upper Year Scholarship, and placed on Dean's Honors List.
+    % \item {\bf Mentor, StarterHacks 2020:} Provided technical and design advice in Canada's largest beginner-focused hackathon.
+    % \item {\bf Editor, mathNEWS:} Provide news and recreation to student body via student publication of the Faculty of Mathematics. 
+    \item {\bf Relevant Coursework:} Data Structures, Object-Oriented Prorgamming (C++), Functional Programming (Racket, Haskell)
+    \end{itemize}}
+
 %%% Skills
 %%% ------------------------------------------------------------
 \NewPart{Skills}{}
@@ -144,6 +160,13 @@
 %%% ------------------------------------------------------------
 \NewPart{Experience}{}
 \normalsize
+\WorkEntry
+{Carta}
+{Sep 2021 -- Dec 2021}
+{Incoming Software Engineering Intern, Infrastructure}
+{
+% todo: work
+}
 \iffalse
 % long form description for job applications
 Made Tailscale ready for the cloud, by creating features that allowed it 
@@ -222,35 +245,20 @@ functionality into reusable components.
 {Rust}
 {Emulator for CHIP-8 microprocessor. Simulated behavior of machine instructions with
 Rust, created graphics in framebuffer.}
-\vspace{2mm}
+\vspace{1mm}
 \ProjectEntry{Prose}{https://github.com/namansood/prose}
 {Go}
 {Markdown-powered blog. Developed custom HTTP server with hooks for web request logging, routing 
 and error handling.}
-\vspace{2mm}
+\vspace{1mm}
 \ProjectEntry{Turtle Shell}{https://github.com/namansood/tsh}
 {C, POSIX APIs}
 {Shell for Unix operating systems in C. Learned memory management, process management,
 and usage of POSIX interfaces. }
-\vspace{2mm}
+\vspace{1mm}
 \ProjectEntry{cmdmap}{https://github.com/namansood/cmdmap}
 {Node.js}
 {Node module to map CLI programs to a JSON API. Designed abstraction over standard
 library features for improved security.}
 
-%%% Education
-%%% ------------------------------------------------------------
-\NewPart{Education}{}
-\EducationEntry
-{University of Waterloo}
-{Sep 2019 -- Apr 2024}
-{Candidate for Bachelor of Computer Science -- 94.5\%}
-{\begin{itemize} \itemsep -1pt
-    \vspace{1mm}
-    \item {\bf Awards and Honors:} Received \$15,000 Computer Science Upper Year Scholarship, and placed on Dean's Honors List.
-    \item {\bf Mentor, StarterHacks 2020:} Provided technical and design advice in Canada's largest beginner-focused hackathon.
-    \item {\bf Editor, mathNEWS:} Provide news and recreation to student body via student publication of the Faculty of Mathematics. 
-    \item {\bf Relevant Coursework:} Data Structures, Object-Oriented Prorgamming (C++), Functional Programming (Racket, Haskell)
-    \end{itemize}}
-\ 
 \end{document}
