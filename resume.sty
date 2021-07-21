@@ -24,9 +24,16 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{sectsty}
-%\usepackage{fontspec}
 
+% using arbitrary fonts requires XeLaTeX, but that is
+% incompatible with the ATS hack below. uncomment with
+% caution
+%\usepackage{fontspec}
 %\setsansfont{Roboto}
+
+% ATS hack: makes resumes easier to parse for machines
+\input{glyphtounicode}
+\pdfgentounicode=1
 
 \newcommand{\MyName}[1]{ % Name
 \Huge 
