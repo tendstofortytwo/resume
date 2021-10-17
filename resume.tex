@@ -5,7 +5,7 @@
 % Modified for use by Naman Sood.
 %
 % Feel free to distribute this template, but please keep the
-% referal to HowToTeX.com.
+% referral to HowToTeX.com.
 %
 % HowToTeX seems to be dead, but the unmodified template can
 % be found at:
@@ -26,27 +26,12 @@
         \href{https://github.com/namansood}{github.com/namansood}
 \hfill}
 
-%%% Education
-%%% ------------------------------------------------------------
-\NewPart{Education}{}
-\EducationEntry
-{University of Waterloo}
-{Sep 2019 -- Apr 2024}
-{Bachelor of Computer Science -- 92.3\%}
-{\begin{itemize} \itemsep -1pt
-    \vspace{1mm}
-    \item {\bf Awards and Honors:} \$15,000 Computer Science Upper Year Scholarship, Dean's Honors List.
-    % \item {\bf Mentor, StarterHacks 2020:} Provided technical and design advice in Canada's largest beginner-focused hackathon.
-    % \item {\bf Editor, mathNEWS:} Provide news and recreation to student body via student publication of the Faculty of Mathematics. 
-    \item {\bf Relevant Coursework:} Data Structures, Object-Oriented Programming (C++), Functional Programming (Racket, Haskell)
-    \end{itemize}}
-
 %%% Skills
 %%% ------------------------------------------------------------
 \NewPart{Skills}{}
 \normalsize
-\SkillsEntry{Languages}{JavaScript, Go, Rust, C++, C, Scala, HTML/CSS, Shell, Python, Racket, Haskell}
-\SkillsEntry{Technologies}{Linux, Git, Docker, TCP/IP, AWS EC2/S3, gRPC, React, SQL, MongoDB, Firebase}
+\SkillsEntry{Languages}{JavaScript, Go, Rust, C++, C, Python, Scala, HTML/CSS, Shell, Haskell}
+\SkillsEntry{Technologies}{Git, Docker, Kubernetes, AWS EC2/S3, gRPC/Protobuf, React, SQL, MongoDB, Firebase}
 \vspace{1mm} % other sections end in list items, which have their own padding -- compensate for that here
 
 %%% Work experience
@@ -58,7 +43,10 @@
 {Sep 2021 -- Present}
 {Software Engineering Intern, Infrastructure -- Kitchener, ON}
 {
-% todo: work
+\begin{itemize} \itemsep -1pt
+    \item Reduced Docker image build times by 10x by simplifying package requirements and allowing precompiled dependencies.
+    \item Enforced standardization of Protobuf definitions for over 100 services by designing static analysis and refactoring tool in Go.
+\end{itemize}
 }
 \iffalse
 % long form description for job applications
@@ -85,7 +73,7 @@ Accelerated research in the field of Byzantine fault tolerant distributed comput
 {May 2020 -- Aug 2020}
 {Research Associate, Sirius Blockchain Research Group -- Waterloo, ON}
 {\begin{itemize} \itemsep -1pt
-    \item Hardened security by enforcing BLS signature verification for Byzantine fault tolerant distributed consensus system in Go.
+    \item Improved throughput of Go blockchain system by 3x by increasing maximum number of transactions sent in each message.
     \item Streamlined deployment of project by using Docker images to generate repeatable builds across diverse environments.
     \item Unified similar codebases by migrating duplicate components to a single  C++ project.
     \item Assisted distributed systems research by conducting experiments on AWS EC2 and analyzing performance data in gnuplot.
@@ -102,16 +90,14 @@ Designed and build native apps for professional photographers to deliver photos 
 {\begin{itemize} \itemsep -1pt
     \item Simplified distribution of professionally clicked photos by building Electron and React Native apps.
     \item Designed and deployed API to upload and preview photos in low-bandwidth situations using Node.js and AWS S3.
-    \item Reduced technical debt in React Native project by replacing duplicated code with reusable components.
     \end{itemize}}
 \vspace{1mm}
 \WorkEntry
 {The Girl Code}
 {Mar 2018 -- Apr 2020}
-{Full Stack Developer -- New Delhi, India}
+{Volunteer Full Stack Developer -- New Delhi, India}
 {\begin{itemize} \itemsep -1pt
-	\item Empowered school children by creating online platform to learn Python programming, using Node.js and MongoDB.
-	\item Assisted research by tracking usage of learning platform to collect data for National University of Singapore study.
+	\item Developed online platform to teach Python programming in 10+ workshops across 3 countries, using Node.js and MongoDB.
     \end{itemize}}
 
 %%% Projects
@@ -123,11 +109,6 @@ Designed and build native apps for professional photographers to deliver photos 
 {Emulator for CHIP-8 microprocessor. Simulated behavior of machine instructions with
 Rust, created graphics in framebuffer.}
 \vspace{1.5mm}
-\ProjectEntry{Prose}{https://github.com/namansood/prose}
-{Go}
-{Markdown-powered blog. Developed custom HTTP server with hooks for web request logging, routing 
-and error handling.}
-\vspace{1.5mm}
 \ProjectEntry{Turtle Shell}{https://github.com/namansood/tsh}
 {C, POSIX APIs}
 {Shell for Unix operating systems in C. Learned memory management, process management,
@@ -137,5 +118,25 @@ and usage of POSIX interfaces. }
 {Node.js}
 {Node module to map CLI programs to a JSON API. Designed abstraction over standard
 library features for improved security.}
+\vspace{1.5mm}
+\ProjectEntry{Prose}{https://github.com/namansood/prose}
+{Go, HTTP, systemd}
+{Designed HTTP server with hooks for logging, routing and error handling, with systemd service for uptime and observability.}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+\EducationEntry
+{University of Waterloo}
+{Sep 2019 -- Apr 2024}
+{Bachelor of Computer Science -- 92.3\% average}
+{\begin{itemize} \itemsep -1pt
+    \vspace{1mm}
+    \item {\bf Awards and Honors:} \$15,000 Computer Science Upper Year Scholarship, Dean's Honors List.
+    % \item {\bf Mentor, StarterHacks 2020:} Provided technical and design advice in Canada's largest beginner-focused hackathon.
+    % \item {\bf Editor, mathNEWS:} Provide news and recreation to student body via student publication of the Faculty of Mathematics. 
+    \item {\bf Relevant Coursework:} Data Structures, Object-Oriented Programming (C++), Functional Programming (Racket, Haskell)
+    \end{itemize}}
+\vspace{-2mm}
 
 \end{document}
