@@ -30,7 +30,7 @@
 \NewPart{Skills}{}
 \normalsize
 \SkillsEntry{Languages}{JavaScript, Go, Rust, C++, C, Python, Scala, HTML/CSS, Shell, Haskell}
-\SkillsEntry{Technologies}{Git, Docker, Kubernetes, AWS EC2/S3, gRPC/Protobuf, React, SQL, MongoDB, Firebase}
+\SkillsEntry{Technologies}{Git, Docker, Kubernetes, AWS EC2/S3, gRPC/Protobuf, React, SQL, MongoDB}
 \vspace{1mm} % other sections end in list items, which have their own padding -- compensate for that here
 
 %%% Work experience
@@ -39,14 +39,14 @@
 \normalsize
 \WorkEntry
 {Carta}
-{Sep 2021 -- Present}
+{Sep 2021 -- Dec 2021}
 {Software Engineering Intern, Infrastructure -- Kitchener, ON}
 {
 \begin{itemize} \itemsep -1pt
+    \item Designed new gRPC request logging system using Kubernetes DaemonSets for auditing and compliance across organization.
     \item Reduced Docker image build times by 10x by simplifying package requirements and allowing precompiled dependencies.
-    \item Enforced standardization of Protobuf definitions for over 100 services by designing static analysis and refactoring tool in Go.
-\end{itemize}
-}
+    \item Enforced standardization of Protobuf definitions for over 300 services by designing static analysis and refactoring tool in Go.
+\end{itemize}}
 \iffalse
 % long form description for job applications
 Made Tailscale ready for the cloud, by creating features that allowed it to run in lightweight, unprivileged container environments. This included a virtual networking stack for connecting to the Tailscale network without kernel privileges to create a network driver, a SOCKS5 proxy to allow applications to communicate over this virtual networking stack, and ephemeral authentication keys for stateless access to the Tailscale network. Also published long-form technical content on company blog (https://tailscale.com/blog/2021-05-github-actions-and-tailscale/) and contributed to product knowledge base.
@@ -62,7 +62,6 @@ Made Tailscale ready for the cloud, by creating features that allowed it to run 
     \item Enabled clients to secure CI/CD pipelines by creating a GitHub Action (\underline{\href{https://github.com/tailscale/github-action}{link}}) that allows workflows to use Tailscale VPN. % can say CI/CD here
     \item Expanded outreach within the technical community by writing long-form content for corporate blog (\underline{\href{https://tailscale.com/blog/2021-05-github-actions-and-tailscale/}{link}}).
     \end{itemize}}
-\vspace{1mm}
 \iffalse
 % long form description for job applications
 Accelerated research in the field of Byzantine fault tolerant distributed computing, by implementing security features (like BLS signature verification), streamlining build and deployment of project using Docker, and reducing technical debt by standardizing use of external dependencies. Conducted performance benchmarks on AWS and analyzed performance data using gnuplot and Python.
@@ -77,7 +76,6 @@ Accelerated research in the field of Byzantine fault tolerant distributed comput
     \item Unified similar codebases by migrating duplicate components to a single  C++ project.
     \item Assisted distributed systems research by conducting experiments on AWS EC2 and analyzing performance data in gnuplot.
     \end{itemize}}
-\vspace{1mm}
 \iffalse
 % long form description for job applications
 Designed and build native apps for professional photographers to deliver photos to clients, using Electron and React Native, and created API to preview uploaded photos in low-bandwidth situations, using Node.js and AWS S3. Reduced technical debt in React Native project by combining similar functionality into reusable components.
@@ -90,7 +88,6 @@ Designed and build native apps for professional photographers to deliver photos 
     \item Simplified distribution of professionally clicked photos by building Electron and React Native apps.
     \item Designed and deployed API to upload and preview photos in low-bandwidth situations using Node.js and AWS S3.
     \end{itemize}}
-\vspace{1mm}
 \WorkEntry
 {The Girl Code}
 {Mar 2018 -- Apr 2020}
@@ -121,6 +118,7 @@ library features for improved security.}
 \ProjectEntry{Prose}{https://github.com/namansood/prose}
 {Go, HTTP, systemd}
 {Designed HTTP server with hooks for logging, routing and error handling, with systemd service for uptime and observability.}
+\vspace{1mm}
 
 %%% Education
 %%% ------------------------------------------------------------
@@ -130,7 +128,6 @@ library features for improved security.}
 {Sep 2019 -- Apr 2024}
 {Bachelor of Computer Science -- 92.3\% average}
 {\begin{itemize} \itemsep -1pt
-    \vspace{1mm}
     \item {\bf Awards and Honors:} \$15,000 Computer Science Upper Year Scholarship, Dean's Honors List
     % \item {\bf Mentor, StarterHacks 2020:} Provided technical and design advice in Canada's largest beginner-focused hackathon.
     % \item {\bf Editor, mathNEWS:} Provide news and recreation to student body via student publication of the Faculty of Mathematics. 
