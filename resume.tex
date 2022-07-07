@@ -25,6 +25,20 @@
         \href{https://github.com/tendstofortytwo}{github.com/tendstofortytwo}
 \hfill}
 
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+\EducationEntry
+{University of Waterloo}
+{Sep 2019 -- Apr 2024}
+{Bachelor of Computer Science -- 3.92 GPA}
+{\begin{itemize} \itemsep -1pt
+    % \item {\bf Awards and Honors:} \$15,000 Computer Science Upper Year Scholarship, Dean's Honors List
+    % \item {\bf Mentor, StarterHacks 2020:} Provided technical and design advice in Canada's largest beginner-focused hackathon.
+    % \item {\bf Editor, mathNEWS:} Provide news and recreation to student body via student publication of the Faculty of Mathematics. 
+    \item {\bf Relevant Coursework:} Operating Systems, Applied Cryptography, Data Structures \& Algorithms
+    \end{itemize}}
+
 %%% Skills
 %%% ------------------------------------------------------------
 \NewPart{Skills}{}
@@ -40,12 +54,12 @@
 \WorkEntry
 {data.world}
 {May 2022 -- Present}
-{Software Engineering Intern -- Austin, TX}
-{}
+{Software Engineering Intern \hfill Austin, TX}
+{\vspace{0.1mm}}
 \WorkEntry
 {Carta}
 {Sep 2021 -- Dec 2021}
-{Software Engineering Intern, Infrastructure -- Kitchener, ON}
+{Software Engineering Intern, Infrastructure \hfill Kitchener, ON}
 {
 \begin{itemize} \itemsep -1pt
     \item Designed distributed gRPC logging system using Apache Fluent for \textbf{scalable auditing and compliance} across organization.
@@ -61,13 +75,13 @@ Made Tailscale ready for the cloud, by creating features that allowed it to run 
 \WorkEntry
 {Tailscale}
 {Jan 2021 -- Apr 2021}
-{Software Engineering Intern -- Toronto, ON}
+{Software Engineering Intern \hfill Toronto, ON}
 {\begin{itemize} \itemsep -1pt
-    \item \textbf{Introduced cloud/serverless support} by providing userspace TCP/IP emulation for LXC containers, using Google gVisor.
+    \item \textbf{Introduced cloud/serverless support} by emulating TCP/IP stack in userspace for Docker containers, using Google gVisor.
     \item Enabled standardized communication using SOCKS5 protocol over Tailscale VPN by implementing proxy server in Go.
     \item \textbf{Simplified deployments in cloud environments} by creating single-session authentication keys with auto-cleanup.
-    \item Enabled clients to \textbf{secure CI/CD pipelines} by creating a GitHub Action (\underline{\href{https://github.com/tailscale/github-action}{link}}) that allows workflows to use Tailscale VPN. % can say CI/CD here
-    \item Expanded outreach within the technical community by writing long-form content for corporate blog (\underline{\href{https://tailscale.com/blog/2021-05-github-actions-and-tailscale/}{link}}).
+    \item Developed a \href{https://github.com/tailscale/github-action}{GitHub Action \linkIcon} for end-users that allows \textbf{plug-and-play security} for CI/CD pipelines.
+    \item Expanded outreach within the technical community by writing \href{https://tailscale.com/blog/2021-05-github-actions-and-tailscale/}{long-form content for corporate blog \linkIcon}.
     \end{itemize}}
 \iffalse
 % long form description for job applications
@@ -76,7 +90,7 @@ Accelerated research in the field of Byzantine fault tolerant distributed comput
 \WorkEntry
 {University of Waterloo}
 {May 2020 -- Aug 2020}
-{Research Associate -- Waterloo, ON}
+{Research Associate \hfill Waterloo, ON}
 {\begin{itemize} \itemsep -1pt
     \item Optimized Go consensus system to \textbf{3x throughput} by increasing maximum transaction count sent in each message.
     \item Streamlined deployment of project by using Docker images to generate repeatable builds across diverse environments.
@@ -90,7 +104,7 @@ Designed and build native apps for professional photographers to deliver photos 
 \WorkEntry
 {Creesync Software}
 {May 2019 -- Aug 2019}
-{Software Engineering Intern -- New Delhi, India}
+{Software Engineering Intern \hfill New Delhi, India}
 {\begin{itemize} \itemsep -1pt
     \item Simplified distribution of professionally clicked photos by building Electron and React Native apps.
     \item Designed and deployed API to upload and preview photos in low-bandwidth situations using NodeJS and AWS S3.
@@ -98,7 +112,7 @@ Designed and build native apps for professional photographers to deliver photos 
 \WorkEntry
 {The Girl Code}
 {Mar 2018 -- Apr 2020}
-{Volunteer Full Stack Developer -- New Delhi, India}
+{Volunteer Full Stack Developer \hfill New Delhi, India}
 {\begin{itemize} \itemsep -1pt
 	\item Developed online platform to interactively teach programming in \textbf{10+ workshops across 3 countries} using NodeJS.
     \end{itemize}}
@@ -126,21 +140,6 @@ paging, while balancing performance and maintainability.}
 {NodeJS}
 {Node module to map CLI programs to a JSON API. Designed abstraction over standard
 library features for improved security.}
-\vspace{1mm}
-
-%%% Education
-%%% ------------------------------------------------------------
-\NewPart{Education}{}
-\EducationEntry
-{University of Waterloo}
-{Sep 2019 -- Apr 2024}
-{Bachelor of Computer Science -- 3.92 GPA}
-{\begin{itemize} \itemsep -1pt
-    % \item {\bf Awards and Honors:} \$15,000 Computer Science Upper Year Scholarship, Dean's Honors List
-    % \item {\bf Mentor, StarterHacks 2020:} Provided technical and design advice in Canada's largest beginner-focused hackathon.
-    % \item {\bf Editor, mathNEWS:} Provide news and recreation to student body via student publication of the Faculty of Mathematics. 
-    \item {\bf Relevant Coursework:} Operating Systems, Applied Cryptography, Principles of Programming Languages
-    \end{itemize}}
 \vspace{-2mm}
 
 \end{document}

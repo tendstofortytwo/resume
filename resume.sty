@@ -24,6 +24,8 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{sectsty}
+\usepackage{fontawesome}
+\usepackage{xcolor}
 
 % using arbitrary fonts requires XeLaTeX, but that is
 % incompatible with the ATS hack below. uncomment with
@@ -34,6 +36,8 @@
 % ATS hack: makes resumes easier to parse for machines
 \input{glyphtounicode}
 \pdfgentounicode=1
+
+\newcommand{\linkIcon}{{\footnotesize \faExternalLink}}
 
 \newcommand{\MyName}[1]{ % Name
 \Huge 
@@ -51,9 +55,10 @@
 
 \newcommand{\EducationEntry}[4]{
 \noindent \textbf{\large #1} \hfill      % School
-\smash{\colorbox{Black}{%
-  {%
-  \hfill\color{White}\strut ~#2~}}} \par  % Duration
+%\smash{\colorbox{Black}{%
+%  {%
+%  \hfill\color{White}\strut ~#2~}}} \par  % Duration
+#2 \par
   \vspace{0.5mm}
 \noindent \textit{#3} \par        % Degree
 \noindent\hangindent=0em\hangafter=0 #4 % Description
@@ -61,16 +66,19 @@
 
 \newcommand{\WorkEntry}[4]{       % Same as \EducationEntry
 \noindent \textbf{\large#1} \hfill      % Company
-\smash{\colorbox{Black}{%
-  {%
-  \hfill\color{White}\strut ~#2~}}} \par   % Duration
+%\smash{\colorbox{Black}{%
+%  {%
+%  \hfill\color{White}\strut ~#2~}}} \par   % Duration
+#2 \par
 \vspace{0.5mm}
     \noindent \textit{#3} \par        % Job title
+\vspace{-0.5mm}
 \noindent\hangindent=2em\hangafter=0 #4 % Description
-\par}
+\par
+\vspace{0.5mm}}
 
 \newcommand{\ProjectEntry}[4]{         % Similar to \EducationEntry
-\noindent {\large \textbf{#1} (\underline{\href{#2}{link}})} \noindent \textit{#3} \par
+\noindent \href{#2}{{\large \textbf{#1}} \linkIcon} \noindent \textit{#3} \par
 \vspace{0.5mm}
 \noindent #4 % Description
 \par}
