@@ -37,80 +37,70 @@
 \input{glyphtounicode}
 \pdfgentounicode=1
 
+% remove paragraph indents
+\setlength\parindent{0pt}
+
 \newcommand{\linkIcon}{{\footnotesize \faExternalLink}}
 
-\newcommand{\MyName}[1]{ % Name
-\Huge 
-\usefont{OT1}{phv}{b}{n}
-\begin{center} #1 \end{center}
-\par \normalsize \normalfont}
+\newcommand{\MyName}[1]{
+  \begin{center}
+    \Huge\usefont{OT1}{phv}{b}{n} #1
+  \end{center}
+  \par
+}
 
-\newcommand{\NewPart}[1]{\vspace{-5mm}\section*{\large \uppercase{#1}}\vspace{-1mm}}
+\newcommand{\NewPart}[1]{
+  \vspace{-5mm}
+  \section*{\large \uppercase{#1}}
+  \vspace{-1mm}
+  \normalsize
+}
 
 \newcommand{\SkillsEntry}[2]{
-\noindent\baselineskip=14pt\hangindent=0em\hangafter=0 % Indentation
-\makebox[1.75cm][l]{                  % Box to align text
-\bf{#1}}                    % Entry name (birth, address, etc.)
-\hspace{2em} #2 \par}              % Entry value
+  \baselineskip=14pt\hangindent=0em\hangafter=0
+  \makebox[1.75cm][l]{
+    \textbf{#1}
+  }
+  \hspace{2em} #2
+  \par
+}
+
+\newcommand{\WorkEntry}[4]{
+  \textbf{\large #1} \hfill #2 \par
+  \vspace{0.5mm}
+   \textit{#3} \par
+  \hangindent=2em\hangafter=0 #4
+  \par
+}
 
 \newcommand{\EducationEntry}[4]{
-\noindent \textbf{\large #1} \hfill      % School
-%\smash{\colorbox{Black}{%
-%  {%
-%  \hfill\color{White}\strut ~#2~}}} \par  % Duration
-#2 \par
-  \vspace{0.5mm}
-\noindent \textit{#3} \par        % Degree
-\noindent\hangindent=0em\hangafter=0 #4 % Description
-\par}
-
-\newcommand{\WorkEntry}[4]{       % Same as \EducationEntry
-\noindent \textbf{\large#1} \hfill      % Company
-%\smash{\colorbox{Black}{%
-%  {%
-%  \hfill\color{White}\strut ~#2~}}} \par   % Duration
-#2 \par
-\vspace{0.5mm}
-    \noindent \textit{#3} \par        % Job title
-\vspace{-0.5mm}
-\noindent\hangindent=2em\hangafter=0 #4 % Description
-\par
-\vspace{0.5mm}}
-
-\newcommand{\ProjectEntry}[4]{         % Similar to \EducationEntry
-\noindent \href{#2}{{\large \textbf{#1}} \linkIcon} \noindent \textit{#3} \par
-\vspace{0.5mm}
-\noindent #4 % Description
-\par}
-
-%% Define a new 'modern' style for the url package that will use a smaller font.
-\makeatletter
-\def\url@modernstyle{
-  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{}}}
-  \renewcommand\large{\@setfontsize\Large{11pt}{18}}
-\makeatother
-%\urlstyle{modern} %% And use the newly defined style.
-
-\frenchspacing              % Better looking spacings after periods
-\pagestyle{empty}           % No pagenumbers/headers/footers
-
-\hypersetup{
-    pdfborder=0 0 0
+  \WorkEntry{#1}{#2}{#3}{#4}
 }
+
+\newcommand{\ProjectEntry}[4]{
+  \href{#2}{{\large \textbf{#1}} \linkIcon} 
+  \textit{#3}
+  \par
+  \vspace{0.5mm}
+   #4
+  \par
+}
+
+% reduce large font size a bit
+\renewcommand\large{\@setfontsize\Large{11pt}{18}}
+
+% remove page numbers/headers/footers
+\pagestyle{empty}
+
+% remove link borders
+\hypersetup{pdfborder=0 0 0}
 
 \renewcommand{\familydefault}{\sfdefault}
 \setlist[itemize]{leftmargin=*}
 
-%%% Custom sectioning (sectsty package)
-%%% ------------------------------------------------------------
-
-\sectionfont{                 % Change font of \section command
+% Custom sectioning (sectsty package)
+\sectionfont{
   \vspace{-1mm}
-  \usefont{OT1}{phv}{b}{n}%   % bch-b-n: CharterBT-Bold font
-  \sectionrule{0pt}{0pt}{-5pt}{1pt}}
-
-%%% Macros
-%%% ------------------------------------------------------------
-\newlength{\spacebox}
-\settowidth{\spacebox}{developer}      % Box to align text
-\newcommand{\sepspace}{\vspace*{1em}}   % Vertical space macro
+  \usefont{OT1}{phv}{b}{n}
+  \sectionrule{0pt}{0pt}{-5pt}{1pt}
+}
