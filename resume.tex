@@ -12,7 +12,7 @@
 % https://www.overleaf.com/latex/templates/your-new-cv/xqzhcmqkqrtw
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{article}
-\usepackage[margin=0.65in,top=0.3in,bottom=0.4in]{geometry}
+\usepackage[margin=0.5in,top=0.3in,bottom=0.4in]{geometry}
 \usepackage{resume}
 
 \begin{document}
@@ -58,7 +58,14 @@
   {data.world}
   {May 2022 -- Present}
   {Software Engineering Intern \hfill Austin, TX}
-  {\vspace{2.5mm}}
+  {
+    \begin{itemize} \itemsep -1pt
+      \item \textbf{Spearheaded Databricks and Apache Spark support} in Java-based data catalog service by integrating JDBC database drivers.
+      \item Boosted user productivity in code editing workspace by generating autocompletions for RDF classes and properties.
+      \item \textbf{Delivered key usability improvements} to code workspace in areas like error visibility and autogeneration of code snippets.
+      \item Refined syntax highlighting for SPARQL queries by improving regular expressions used to parse language constructs.
+    \end{itemize}
+  }
 \WorkEntry
   {Carta}
   {Sep 2021 -- Dec 2021}
@@ -97,16 +104,16 @@
       \item Assisted distributed systems research by conducting experiments on AWS EC2 and analyzing performance data in gnuplot.
     \end{itemize}
   }
-\WorkEntry
-  {Creesync Software}
-  {May 2019 -- Aug 2019}
-  {Software Engineering Intern \hfill New Delhi, India}
-  {
-    \begin{itemize} \itemsep -1pt
-      \item Simplified distribution of professionally clicked photos by building Electron and React Native apps.
-      \item Designed and deployed API to upload and preview photos in low-bandwidth situations using NodeJS and AWS S3.
-    \end{itemize}
-  }
+% \WorkEntry
+%   {Creesync Software}
+%   {May 2019 -- Aug 2019}
+%   {Software Engineering Intern \hfill New Delhi, India}
+%   {
+%     \begin{itemize} \itemsep -1pt
+%       \item Simplified distribution of professionally clicked photos by building Electron and React Native apps.
+%       \item Designed and deployed API to upload and preview photos in low-bandwidth situations using NodeJS and AWS S3.
+%     \end{itemize}
+%   }
 \WorkEntry
   {The Girl Code}
   {Mar 2018 -- Apr 2020}
