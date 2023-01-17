@@ -1,0 +1,244 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button#print {
+  margin: 2rem auto;
+  border: none;
+  font-size: 9pt;
+  font-family: "IBM Plex Sans";
+  background: #eee;
+  color: #425580;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1), 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+button#print:hover {
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1), 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+button#print:active {
+  background: #e0e0e0;
+}
+button#print i {
+  font-size: 7pt;
+  margin-right: 3pt;
+}
+
+#page {
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto 4rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1), 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+  line-height: 14pt;
+  background-size: 14pt 14pt;
+  background-repeat: repeat;
+  background-position: center top;
+}
+#page .page-contents {
+  padding: 14pt 42pt 28pt;
+}
+
+@media print {
+  #page {
+    box-shadow: none;
+    height: auto;
+    width: auto;
+    margin: 0;
+  }
+
+  button#print {
+    display: none;
+  }
+}
+@page {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+
+h1.name {
+  margin: 0;
+  text-align: center;
+  font-size: 24pt;
+  line-height: 21pt;
+  padding-top: 7pt;
+  height: 28pt;
+  font-weight: 600;
+}
+
+nav.links {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding-top: 7pt;
+  height: 21pt;
+}
+nav.links a {
+  display: block;
+  color: inherit;
+  display: block;
+  padding: 0 7pt;
+  height: 14pt;
+  line-height: 14pt;
+  text-decoration: none;
+  font-size: 9pt;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a i.fa {
+  font-size: 6pt;
+  margin: 0 0.5pt -1.5pt;
+  line-height: 9.24pt;
+  position: relative;
+  width: 9.24pt;
+  height: 9.24pt;
+}
+a i.fa:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  margin: 0;
+  position: relative;
+  padding-top: 7pt;
+  line-height: 14pt;
+  height: 21pt;
+  font-size: 13pt;
+  font-weight: 900;
+  display: block;
+  padding-right: 0;
+  align-self: flex-start;
+  width: 100%;
+}
+h2:before {
+  content: "";
+  position: absolute;
+  bottom: -2pt;
+  left: 0;
+  width: 100%;
+  box-sizing: content-box;
+  height: 0;
+  border-top: 1.5pt solid #8ecfd5;
+  z-index: -1;
+}
+
+h3 {
+  margin: 0;
+  font-size: 11pt;
+}
+h3 a i.fa {
+  font-size: 7pt;
+  margin: 0 0 -1.5pt 3pt;
+}
+
+h4 {
+  margin: 0;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 9pt;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+strong {
+  font-weight: 600;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+section.skills p {
+  height: 14pt;
+}
+section.skills p:first-of-type {
+  margin-top: 7pt;
+}
+section.skills strong {
+  display: inline-block;
+  width: 80pt;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 14pt;
+}
+ul li {
+  display: block;
+  position: relative;
+}
+ul li:before {
+  content: "·";
+  height: 14pt;
+  width: 14pt;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -14pt;
+  text-align: center;
+  line-height: 14pt;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+section.experience article.work-exp {
+  position: relative;
+  margin: 7pt 0 0;
+}
+
+aside.date {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 14pt;
+  line-height: 14pt;
+}
+
+aside.languages {
+  color: #444;
+  font-style: italic;
+  font-weight: 400;
+}
+
+section.projects article.project {
+  height: 28pt;
+}
+section.projects article.project:first-of-type {
+  margin-top: 7pt;
+}
+section.projects div.project-title {
+  display: flex;
+  align-items: baseline;
+  height: 14pt;
+}
+section.projects div.project-title h3 {
+  padding-right: 3pt;
+}
+
+section.education article.institution {
+  position: relative;
+  margin-top: 7pt;
+}
+
+/*# sourceMappingURL=resume.css.map */

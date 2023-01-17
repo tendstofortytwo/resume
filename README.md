@@ -10,6 +10,4 @@ This is the code for my personal website and resume. The main branch of this rep
 
 ## License
 
-I reserve all rights to the code in this repository except `resume.tex` and `resume.sty`. Please do not copy this code without my permission. If you would like permission, feel free to email me: mail@nsood.in.
-
-The license for `resume.tex` and `resume.sty` is in a comment header in those files.
+I reserve all rights to the code in this repository. Please do not copy this code without my permission. If you would like permission, feel free to email me: mail@nsood.in.

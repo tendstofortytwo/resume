@@ -1,0 +1,276 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+$ls: 14pt;
+
+button#print {
+    margin: 2rem auto;
+    border: none;
+    font-size: 9pt;
+    font-family: 'IBM Plex Sans';
+    background: #eee;
+    color: #425580;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1), 0 0.1rem 0.2rem rgba(0,0,0,0.1);
+    
+    &:hover {
+        box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1), 0 0.1rem 0.2rem rgba(0,0,0,0.2);
+    }
+    
+    &:active {
+        background: #e0e0e0;
+    }
+    
+    i {
+        font-size: 7pt;
+        margin-right: 3pt;
+    }
+}
+
+#page {
+	width: 8.5in;
+	height: 11in;
+	margin: 0 auto 4rem;
+	box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1), 0 0 0.5rem rgba(0,0,0,0.2);
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-weight: 400;
+	font-size: 9pt;
+	line-height: $ls;
+	$fade: #ccc;
+	$main: #aaa;
+	//background-image: linear-gradient(white 45%, $fade 45%, $fade 50%, white 50%, white 95%, $main 95%);
+	background-size: $ls $ls;
+	background-repeat: repeat;
+	background-position: center top;
+	
+	.page-contents {
+		padding: $ls 3*$ls 2*$ls;
+	}
+}
+
+@media print {
+	#page {
+		box-shadow: none;
+		height: auto;
+		width: auto;
+		margin: 0;
+	}
+
+    button#print {
+        display: none;
+    }
+}
+
+// print margins
+@page {
+    margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+h1.name {
+	margin: 0;
+	text-align: center;
+	font-size: 24pt;
+	line-height: 1.5*$ls;
+	padding-top: 0.5*$ls;
+	height: 2*$ls;
+	font-weight: 600;
+}
+
+nav.links {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	padding-top: 0.5*$ls;
+	height: 1.5*$ls;
+	
+	a {
+		display: block;
+		color: inherit;
+		display: block;
+		padding: 0 0.5*$ls;
+		height: $ls;
+		line-height: $ls;
+		text-decoration: none;
+		font-size: 9pt;
+	}
+}
+
+a {
+	color: inherit;
+    text-decoration: none;
+
+    i.fa {
+        font-size: 6pt;
+        margin: 0 0.5pt -1.5pt;
+        line-height: 0.66*$ls;
+        position: relative;
+        width: 0.66*$ls;
+        height: 0.66*$ls;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+h2 {
+	margin: 0;
+	position: relative;
+	padding-top: 0.5*$ls;
+	line-height: $ls;
+	height: 1.5*$ls;
+	font-size: 13pt;
+	font-weight: 900;
+	display: block;
+	padding-right: 0;
+	align-self: flex-start;
+    width: 100%;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: -2pt;
+		left: 0;
+		width: 100%;
+		box-sizing: content-box;
+		//height: 1.5pt;
+        height: 0;
+        border-top: 1.5pt solid #8ecfd5;
+		z-index: -1;
+	}
+}
+
+h3 {
+	margin: 0;
+	font-size: 11pt;
+
+    a i.fa {
+        font-size: 7pt;
+        margin: 0 0 -1.5pt 3pt;
+    }
+}
+
+h4 {
+	margin: 0;
+	font-style: italic;
+	font-weight: 400;
+	font-size: 9pt;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+strong {
+    font-weight: 600;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+}
+
+section.skills {
+	p {
+		height: $ls;
+	}
+	p:first-of-type {
+		margin-top: 0.5*$ls;
+	}
+	strong {
+		display: inline-block;
+		width: 80pt;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0 0 0 $ls;
+	
+	li {
+		display: block;
+		position: relative;
+		&:before {
+			content: '·';
+			height: $ls;
+			width: $ls;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -$ls;
+			text-align: center;
+			line-height: $ls;
+			font-weight: bold;
+            font-size: 12pt;
+		}
+	}
+}
+
+section.experience {
+	article.work-exp {
+		position: relative;
+		margin: 0.5*$ls 0 0;
+	}
+}
+
+aside.date {
+	position: absolute;
+	right: 0;
+	top: 0; //calc($ls / 2);
+	height: $ls;
+	line-height: $ls;
+	// $offset: $4pt;
+	// top: -$offset;
+	// background: black;
+	// color: white;
+	// padding: $offset 1.5*$offset;
+	// height: $ls + 2*$offset;
+}
+	
+aside.languages {
+	color: #444;
+    font-style: italic;
+	font-weight: 400;
+}
+
+section.projects {
+	article.project {
+		&:first-of-type {
+			margin-top: 0.5*$ls;
+		}
+		height: 2*$ls;
+	}
+	
+	div.project-title {
+		display: flex;
+		align-items: baseline;
+		height: $ls;
+		
+		h3 {
+			padding-right: 3pt;
+		}
+	}
+}
+
+section.education {
+	article.institution {
+		position: relative;
+		margin-top: 0.5*$ls;
+	}
+}
