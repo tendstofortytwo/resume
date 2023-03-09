@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	font-family: 'IBM Plex Sans', sans-serif;
 }
 
 $ls: 14pt;
@@ -16,7 +17,6 @@ button#print {
     margin: 2rem auto;
     border: none;
     font-size: 9pt;
-    font-family: 'IBM Plex Sans';
     background: #eee;
     color: #425580;
     padding: 0.5rem 1rem;
@@ -42,7 +42,6 @@ button#print {
 	height: 11in;
 	margin: 0 auto 4rem;
 	box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1), 0 0 0.5rem rgba(0,0,0,0.2);
-	font-family: 'IBM Plex Sans', sans-serif;
 	font-weight: 400;
 	font-size: 9pt;
 	line-height: $ls;
@@ -137,7 +136,7 @@ h2 {
 	line-height: $ls;
 	height: 1.5*$ls;
 	font-size: 13pt;
-	font-weight: 900;
+	font-weight: 600;
 	display: block;
 	padding-right: 0;
 	align-self: flex-start;
@@ -160,6 +159,7 @@ h2 {
 h3 {
 	margin: 0;
 	font-size: 11pt;
+	font-weight: 500;
 
     a i.fa {
         font-size: 7pt;
@@ -178,7 +178,7 @@ h4 {
 }
 
 strong {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 section {
