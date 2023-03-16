@@ -46,7 +46,7 @@ button#print i {
   background-position: center top;
 }
 #page .page-contents {
-  padding: 14pt 42pt 28pt;
+  padding: 14pt 42pt 21pt;
 }
 
 @media print {
