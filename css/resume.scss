@@ -136,22 +136,28 @@ h2 {
 	line-height: $ls;
 	height: 1.5*$ls;
 	font-size: 13pt;
-	font-weight: 600;
+	font-weight: 500;
 	display: block;
 	padding-right: 0;
 	align-self: flex-start;
     width: 100%;
+
+	span {
+		background: white;
+		padding-right: 5pt;
+	}
 	
 	&:before {
 		content: '';
 		position: absolute;
-		bottom: -2pt;
+		top: 9pt;
+		bottom: 0;
+		margin: auto;
 		left: 0;
 		width: 100%;
 		box-sizing: content-box;
-		//height: 1.5pt;
         height: 0;
-        border-top: 1.5pt solid #8ecfd5;
+        border-top: 1.5pt solid #63c8d3;
 		z-index: -1;
 	}
 }
