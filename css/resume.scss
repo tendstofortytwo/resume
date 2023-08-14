@@ -54,7 +54,7 @@ button#print {
 	background-position: center top;
 	
 	.page-contents {
-		padding: $ls 3*$ls 1.5*$ls;
+		padding: 2*$ls 3*$ls 0;
 	}
 }
 
@@ -83,10 +83,9 @@ p {
 h1.name {
 	margin: 0;
 	text-align: center;
-	font-size: 22pt;
+	font-size: 20pt;
 	line-height: 1.5*$ls;
-	padding-top: 0.5*$ls;
-	height: 2*$ls;
+	height: 1.5*$ls;
 	font-weight: 600;
 }
 
@@ -158,7 +157,7 @@ h2 {
 		width: 100%;
 		box-sizing: content-box;
         height: 0;
-        border-top: 1.5pt solid #63c8d3;
+        border-top: 1.5pt solid #ff61b0;
 		z-index: -1;
 	}
 }
@@ -167,6 +166,7 @@ h3 {
 	margin: 0;
 	font-size: 9.5pt;
 	font-weight: 600;
+	padding-right: 6pt;
 
     a i.fa {
         font-size: 7pt;
@@ -179,9 +179,9 @@ h4 {
 	font-style: italic;
 	font-weight: 400;
 	font-size: 8.5pt;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+    // display: flex;
+    // width: 100%;
+    // justify-content: space-between;
 }
 
 strong {
@@ -236,18 +236,51 @@ section.experience {
 	}
 }
 
-aside.date {
-	position: absolute;
-	right: 0;
-	top: 0; //calc($ls / 2);
+// aside.date {
+// 	position: absolute;
+// 	right: 0;
+// 	top: 0; //calc($ls / 2);
+// 	height: $ls;
+// 	line-height: $ls;
+// 	// $offset: $4pt;
+// 	// top: -$offset;
+// 	// background: black;
+// 	// color: white;
+// 	// padding: $offset 1.5*$offset;
+// 	// height: $ls + 2*$offset;
+// }
+
+span.bullet {
+	display: block;
+	position: relative;
+	width: $ls;
 	height: $ls;
-	line-height: $ls;
-	// $offset: $4pt;
-	// top: -$offset;
-	// background: black;
-	// color: white;
-	// padding: $offset 1.5*$offset;
-	// height: $ls + 2*$offset;
+	&:before {
+		content: '·';
+		height: $ls;
+		width: $ls;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: center;
+		line-height: $ls;
+		font-weight: bold;
+		font-size: 12pt;
+	}
+}
+
+article > div {
+	display: flex;
+	justify-content: space-between;
+
+	> div {
+		display: flex;
+
+		&.right-side {
+			justify-content: flex-end;
+		}
+	}
 }
 	
 aside.languages {
@@ -267,6 +300,7 @@ section.projects {
 	div.project-title {
 		display: flex;
 		align-items: baseline;
+		justify-content: flex-start;
 		height: $ls;
 		
 		h3 {

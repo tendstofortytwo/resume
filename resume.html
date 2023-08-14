@@ -21,9 +21,15 @@
 				<section class="education">
 					<h2><span>Education</span></h2>
 					<article class="institution">
-						<h3>University of Waterloo</h3>
-						<h4>Bachelor of Computer Science &ndash; 3.9 GPA</h4>
-						<aside class="date">Sep 2019 &ndash; Apr 2024</aside>
+						<div class="institution-info">
+							<div class="left-side">
+								<h3 class="institution">University of Waterloo</h3>
+								<h4 class="position">Bachelor of Computer Science &ndash; 3.9 GPA</h4>
+							</div>
+							<div class="right-side">
+								<aside class="date">Sep 2019 &ndash; Apr 2024</aside>
+							</div>
+						</div>
 						<ul>
 							<li><strong>Relevant Coursework: </strong><span>Operating Systems, Concurrency, Networks, Security, Data Structures & Algorithms</span></li>
 						</ul>
@@ -37,14 +43,49 @@
 				<section class="experience">
 					<h2><span>Experience</span></h2>
 					<article class="work-exp">
-						<h3 class="employer">FreeBSD Foundation</h3>
-						<h4 class="position">Software Developer Intern <span class="location">Kitchener, ON</span></h4>
-						<aside class="date">May 2023 &ndash; Aug 2023</aside>
+						<div class="employer-info">
+							<div class="left-side">
+								<h3 class="employer">Tailscale</h3>
+								<h4 class="position">Software Developer Intern</h4>
+							</div>
+							<div class="right-side">
+								<span class="location">Toronto, ON</span>
+								<span class="bullet"></span>
+								<aside class="date">Sep 2023 &ndash; Dec 2023</aside>
+							</div>
+						</div>
 					</article>
 					<article class="work-exp">
-						<h3 class="employer">data.world</h3>
-						<h4 class="position">Software Engineer Intern <span class="location">Austin, TX</span></h4>
-						<aside class="date">May 2022 &ndash; Aug 2022</aside>
+						<div class="employer-info">
+							<div class="left-side">
+								<h3 class="employer">FreeBSD Foundation</h3>
+								<h4 class="position">Software Developer Intern</h4>
+							</div>
+							<div class="right-side">
+								<span class="location">Kitchener, ON</span>
+								<span class="bullet"></span>
+								<aside class="date">May 2023 &ndash; Aug 2023</aside>
+							</div>
+						</div>
+						<ul>
+							<li><strong>Modernized firewall infrastructure</strong> by adding support for IPv6 multicast addresses in firewall state-syncing kernel module.</li>
+							<li><strong>Enabled peer-to-peer networking</strong> over PF firewall by porting full-cone NAT to current code, showing <strong>3x performance gain</strong>.</li>
+							<li>Ensured compatibility with container infrastructure by patching Conmon monitoring software to fix regressions on FreeBSD.</li>
+							<li>Enhanced reliability by fixing longstanding bugs in C core system utilities, used for user management and disk monitoring.</li>
+						</ul>
+					</article>
+					<article class="work-exp">
+						<div class="employer-info">
+							<div class="left-side">
+								<h3 class="employer">data.world</h3>
+								<h4 class="position">Software Engineer Intern</h4>
+							</div>
+							<div class="right-side">
+								<span class="location">Austin, TX</span>
+								<span class="bullet"></span>
+								<aside class="date">May 2022 &ndash; Aug 2022</aside>
+							</div>
+						</div>
 						<ul>
 							<li><strong>Spearheaded Databricks and Apache Spark support</strong> in Java-based data catalog service by integrating JDBC database drivers.</li>
 							<li>Boosted user productivity in code editing workspace by generating autocompletions for RDF classes and properties.</li>
@@ -53,9 +94,17 @@
 						</ul>
 					</article>
 					<article class="work-exp">
-						<h3 class="employer">Carta</h3>
-						<h4 class="position">Software Engineer Intern, Infrastructure <span class="location">Kitchener, ON</span></h4>
-						<aside class="date">Sep 2021 &ndash; Dec 2021</aside>
+						<div class="employer-info">
+							<div class="left-side">
+								<h3 class="employer">Carta</h3>
+								<h4 class="position">Software Engineer Intern, Infrastructure</h4>
+							</div>
+							<div class="right-side">
+								<span class="location">Kitchener, ON</span>
+								<span class="bullet"></span>
+								<aside class="date">Sep 2021 &ndash; Dec 2021</aside>
+							</div>
+						</div>
 						<ul>
 							<li>Designed distributed gRPC logging system using Apache Fluent for <strong>scalable auditing and compliance</strong> across organization.</li>
 							<li>Created proof-of-concept for logging system using Kubernetes DaemonSets, with ConfigMaps to deploy custom configurations.</li>
@@ -65,45 +114,69 @@
 						</ul>
 					</article>
 					<article class="work-exp">
-						<h3 class="employer">Tailscale</h3>
-						<h4 class="position">Software Engineer Intern <span class="location">Toronto, ON</span></h4>
-						<aside class="date">Jan 2021 &ndash; Apr 2021</aside>
+						<div class="employer-info">
+							<div class="left-side">
+								<h3 class="employer">Tailscale</h3>
+								<h4 class="position">Software Developer Intern</h4>
+							</div>
+							<div class="right-side">
+								<span class="location">Toronto, ON</span>
+								<span class="bullet"></span>
+								<aside class="date">Jan 2021 &ndash; Apr 2021</aside>
+							</div>
+						</div>
 						<ul>
 							<li><strong>Introduced cloud/serverless support</strong> by emulating TCP/IP stack in userspace for Docker containers, using Google gVisor.</li>
 							<li>Enabled standardized communication using SOCKS5 protocol over Tailscale VPN by implementing proxy server in Go.</li>
-							<li><strong>Simplified deployments in cloud environments</strong> by creating single-session authentication keys with auto-cleanup.</li>
+							<li><strong>Streamlined deployments in cloud environments</strong> by creating single-session authentication keys with auto-cleanup.</li>
 							<li>Developed a <a href="https://github.com/tailscale/github-action">GitHub Action</a> for end-users that allows <strong>plug-and-play security</strong> for CI/CD pipelines.</li>
 							<li>Expanded outreach within the technical community by writing <a href="https://tailscale.com/blog/2021-05-github-actions-and-tailscale/">long-form content for corporate blog.</a></li>
 						</ul>
 					</article>
 					<article class="work-exp">
-						<h3 class="employer">University of Waterloo</h3>
-						<h4 class="position">Research Associate <span class="location">Waterloo, ON</span></h4>
-						<aside class="date">May 2020 &ndash; Aug 2020</aside>
+						<div class="employer-info">
+							<div class="left-side">
+								<h3 class="employer">University of Waterloo</h3>
+								<h4 class="position">Research Associate</h4>
+							</div>
+							<div class="right-side">
+								<span class="location">Waterloo, ON</span>
+								<span class="bullet"></span>
+								<aside class="date">May 2020 &ndash; Aug 2020</aside>
+							</div>
+						</div>
 						<ul>
 							<li>Optimized Go consensus system to <strong>3x throughput</strong> by increasing maximum transaction count sent in each message.</li>
 							<li>Streamlined deployment of project by using Docker images to generate repeatable builds across diverse environments.</li>
-							<li>Unified similar codebases by migrating duplicate components to a single C++ project.</li>
+							<!-- <li>Unified similar codebases by migrating duplicate components to a single C++ project.</li> -->
 							<li>Assisted distributed systems research by conducting experiments on AWS EC2 and analyzing performance data in gnuplot.</li>
 						</ul>
 					</article>
-					<!-- <article class="work-exp">
-						<h3 class="employer">Creesync Software</h3>
-						<h4 class="position">Software Engineering Intern <span class="location">New Delhi, India</span></h4>
-						<aside class="date">May 2019 &ndash; Aug 2019</aside>
+					<article class="work-exp">
+						<div class="employer-info">
+							<div class="left-side">
+								<h3 class="employer">Creesync Software</h3>
+								<h4 class="position">Software Engineering Intern</h4>
+							</div>
+							<div class="right-side">
+								<span class="location">New Delhi, India</span>
+								<span class="bullet"></span>
+								<aside class="date">May 2019 &ndash; Aug 2019</aside>
+							</div>
+						</div>
 						<ul>
 							<li>Simplified distribution of professionally clicked photos by building Electron and React Native apps.</li>
 							<li>Designed and deployed API to upload and preview photos in low-bandwidth situations using Node.js and AWS S3.</li>
 						</ul>
-					</article> -->
-					<article class="work-exp">
+					</article>
+					<!-- <article class="work-exp">
 						<h3 class="employer">The Girl Code</h3>
 						<h4 class="position">Volunteer Full Stack Developer <span class="location">New Delhi, India</span></h4>
 						<aside class="date">Mar 2018 &ndash; Apr 2020</aside>
 						<ul>
 							<li>Developed online platform to interactively teach programming in <strong>10+ workshops across 3 countries</strong> using NodeJS.</li>
 						</ul>
-					</article>
+					</article> -->
 				</section>
 				<section class="projects">
 					<h2><span>Projects</span></h2>

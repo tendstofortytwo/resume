@@ -47,7 +47,7 @@ button#print i {
   background-position: center top;
 }
 #page .page-contents {
-  padding: 14pt 42pt 21pt;
+  padding: 28pt 42pt 0;
 }
 
 @media print {
@@ -72,10 +72,9 @@ p {
 h1.name {
   margin: 0;
   text-align: center;
-  font-size: 22pt;
+  font-size: 20pt;
   line-height: 21pt;
-  padding-top: 7pt;
-  height: 28pt;
+  height: 21pt;
   font-weight: 600;
 }
 
@@ -143,7 +142,7 @@ h2:before {
   width: 100%;
   box-sizing: content-box;
   height: 0;
-  border-top: 1.5pt solid #63c8d3;
+  border-top: 1.5pt solid #ff61b0;
   z-index: -1;
 }
 
@@ -151,6 +150,7 @@ h3 {
   margin: 0;
   font-size: 9.5pt;
   font-weight: 600;
+  padding-right: 6pt;
 }
 h3 a i.fa {
   font-size: 7pt;
@@ -162,9 +162,6 @@ h4 {
   font-style: italic;
   font-weight: 400;
   font-size: 8.5pt;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
 }
 
 strong {
@@ -214,12 +211,35 @@ section.experience article.work-exp {
   margin: 7pt 0 0;
 }
 
-aside.date {
-  position: absolute;
-  right: 0;
-  top: 0;
+span.bullet {
+  display: block;
+  position: relative;
+  width: 14pt;
   height: 14pt;
+}
+span.bullet:before {
+  content: "·";
+  height: 14pt;
+  width: 14pt;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
   line-height: 14pt;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+article > div {
+  display: flex;
+  justify-content: space-between;
+}
+article > div > div {
+  display: flex;
+}
+article > div > div.right-side {
+  justify-content: flex-end;
 }
 
 aside.languages {
@@ -237,6 +257,7 @@ section.projects article.project:first-of-type {
 section.projects div.project-title {
   display: flex;
   align-items: baseline;
+  justify-content: flex-start;
   height: 14pt;
 }
 section.projects div.project-title h3 {
