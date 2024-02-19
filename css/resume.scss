@@ -164,7 +164,7 @@ h2 {
 
 h3 {
 	margin: 0;
-	font-size: 9.5pt;
+	font-size: 8.5pt;
 	font-weight: 600;
 	padding-right: 6pt;
 
@@ -184,7 +184,7 @@ h4 {
     // justify-content: space-between;
 }
 
-strong {
+strong, dt {
     font-weight: 600;
 }
 
@@ -194,13 +194,21 @@ section {
 }
 
 section.skills {
-	p {
+	div {
 		height: $ls;
 	}
-	p:first-of-type {
+	div:first-of-type {
 		margin-top: 0.5*$ls;
 	}
-	strong {
+	dl {
+		margin: 0;
+	}
+	dd {
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
+	dt {
 		display: inline-block;
 		width: 80pt;
 	}

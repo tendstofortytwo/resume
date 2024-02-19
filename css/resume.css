@@ -57,7 +57,6 @@ button#print i {
     width: auto;
     margin: 0;
   }
-
   button#print {
     display: none;
   }
@@ -148,7 +147,7 @@ h2:before {
 
 h3 {
   margin: 0;
-  font-size: 9.5pt;
+  font-size: 8.5pt;
   font-weight: 600;
   padding-right: 6pt;
 }
@@ -164,7 +163,7 @@ h4 {
   font-size: 8.5pt;
 }
 
-strong {
+strong, dt {
   font-weight: 600;
 }
 
@@ -173,13 +172,21 @@ section {
   flex-direction: column;
 }
 
-section.skills p {
+section.skills div {
   height: 14pt;
 }
-section.skills p:first-of-type {
+section.skills div:first-of-type {
   margin-top: 7pt;
 }
-section.skills strong {
+section.skills dl {
+  margin: 0;
+}
+section.skills dd {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+section.skills dt {
   display: inline-block;
   width: 80pt;
 }
