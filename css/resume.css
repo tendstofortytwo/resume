@@ -78,21 +78,36 @@ h1.name {
 }
 
 nav.links {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
   padding-top: 7pt;
   height: 21pt;
 }
-nav.links a {
-  display: block;
-  color: inherit;
-  display: block;
-  padding: 0 7pt;
+nav.links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  list-style: none;
+}
+nav.links ul li {
   height: 14pt;
   line-height: 14pt;
-  text-decoration: none;
   font-size: 8.5pt;
+}
+nav.links ul li:before {
+  content: none;
+}
+nav.links ul li:not(:last-child):after {
+  content: "·";
+  font-weight: 900;
+  padding: 0 3pt;
+}
+nav.links ul li:not(:last-child):after {
+  padding: 0 7pt;
+}
+nav.links ul li a {
+  color: inherit;
+  text-decoration: none;
 }
 
 a {
@@ -149,7 +164,11 @@ h3 {
   margin: 0;
   font-size: 8.5pt;
   font-weight: 600;
-  padding-right: 6pt;
+}
+h3:after {
+  content: "·";
+  font-weight: 900;
+  padding: 0 3pt;
 }
 h3 a i.fa {
   font-size: 7pt;
@@ -218,26 +237,6 @@ section.experience article.work-exp {
   margin: 7pt 0 0;
 }
 
-span.bullet {
-  display: block;
-  position: relative;
-  width: 14pt;
-  height: 14pt;
-}
-span.bullet:before {
-  content: "·";
-  height: 14pt;
-  width: 14pt;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  line-height: 14pt;
-  font-weight: bold;
-  font-size: 12pt;
-}
-
 article > div {
   display: flex;
   justify-content: space-between;
@@ -247,6 +246,11 @@ article > div > div {
 }
 article > div > div.right-side {
   justify-content: flex-end;
+}
+article > div > div.right-side :not(:last-child):after {
+  content: "·";
+  font-weight: 900;
+  padding: 0 3pt;
 }
 
 aside.languages {
@@ -269,6 +273,9 @@ section.projects div.project-title {
 }
 section.projects div.project-title h3 {
   padding-right: 3pt;
+}
+section.projects div.project-title h3:after {
+  content: none;
 }
 
 section.education article.institution {
